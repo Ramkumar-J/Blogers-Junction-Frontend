@@ -23,12 +23,12 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/yourblog" element={<YourBlog />}></Route>
-          <Route path="/readblog" element={<ReadBlog />}></Route>
+          <Route path="/blogs/:id" element={<ReadBlog />}></Route>
         </Routes>
       </main>
-      {/* <footer>
+      <footer>
         <Footer></Footer>
-      </footer> */}
+      </footer>
     </div>
     </BrowserRouter>
   );

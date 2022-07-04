@@ -1,23 +1,46 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function BlogCard() {
+  let [blogs, setblogs] = useState([]);
+  useEffect(() => {
+    async function getAllblogs() {
+      try {
+        let allblogs = await axios.get("http://localhost:3001/blogs");
+        setblogs(allblogs.data);
+      } catch (error) {
+        console.log("error");
+      }
+    }
+    getAllblogs();
+  }, []);
   return (
-    <div className='card'>
-      <div className='card-top'>
-        <img className='img-fluid' src="https://codebrainer.azureedge.net/images/what-is-html.jpg"/>
-        <hr></hr>
-        <div className='card-body'>
-          <h1 className='card-title'>What is HTML?</h1>
-          <p className="card-text">HTML - HyperText Markup Language</p>
-          <p className="card-text">HTML is used to create a structure of a website</p>
-          {/* <img src="https://img.icons8.com/ios-filled/30/view-file.png"></img>
-          <img src="https://img.icons8.com/ios-filled/30/view-file.png"></img> */}
-          <Link className='fs-5' to="/readblog">Read Blog</Link>
+    <>
+      <div className="container">
+        <div className="row">
+          {blogs.map((blog) => {
+            return (
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-5 mb-3">
+                <div className="card">
+                  <div className="card-top mb-0">
+                    <img className="img-fluid" src={blog.blogimage} />
+                    <hr className="mt-1 mb-0 border border-1 border-dark"></hr>
+                    <div className="card-body pt-0">
+                      <h3 className="card-title fw-bold">{blog.headline}</h3>
+                      <Link className="fs-5" to={`/blogs/${blog._id}`}>
+                        Read Blog
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
-  )
+    </>
+  );
 }
 
 export default BlogCard;
