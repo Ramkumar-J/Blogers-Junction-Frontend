@@ -7,7 +7,7 @@ function BlogCard() {
   useEffect(() => {
     async function getAllblogs() {
       try {
-        let allblogs = await axios.get("http://localhost:3001/blogs");
+        let allblogs = await axios.get("https://blogers-junction-nodeapp.herokuapp.com/blogs");
         setblogs(allblogs.data);
       } catch (error) {
         console.log("error");

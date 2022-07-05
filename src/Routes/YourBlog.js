@@ -47,7 +47,7 @@ function YourBlog() {
     },
     onSubmit: async (values) => {
       try {
-        axios.post("http://localhost:3001/yourblog", values);
+        axios.post("https://blogers-junction-nodeapp.herokuapp.com/yourblog", values);
         navigate("/blogs");
       } catch (error) {
         console.log("error");
