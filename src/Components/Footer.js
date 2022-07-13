@@ -23,8 +23,8 @@ function Footer() {
           </Link>
         </li>
         <li class="nav-item">
-          <Link to="/yourblog" class="nav-link px-2 text-white">
-            YourBlog
+          <Link to="/createblog" class="nav-link px-2 text-white">
+            CreateBlog
           </Link>
         </li>
       </ul>

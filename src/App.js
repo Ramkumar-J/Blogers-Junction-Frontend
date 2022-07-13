@@ -6,9 +6,9 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Home from './Routes/Home';
 import Blogs from './Routes/Blogs';
-import YourBlog from './Routes/YourBlog';
 import Footer from './Components/Footer';
 import ReadBlog from './Components/ReadBlog';
+import CreateBlog from './Routes/CreateBlog';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
-          <Route path="/yourblog" element={<YourBlog />}></Route>
+          <Route path="/createblog" element={<CreateBlog />}></Route>
           <Route path="/blogs/:id" element={<ReadBlog />}></Route>
         </Routes>
       </main>

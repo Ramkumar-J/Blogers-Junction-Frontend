@@ -32,8 +32,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-items">
-              <Link className="nav-link" to="/yourblog">
-                YourBlog
+              <Link className="nav-link" to="/createblog">
+                CreateBlog
               </Link>
             </li>
           </ul>

@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function YourBlog() {
+function CreateBlog() {
   let navigate = useNavigate();
   let formik = useFormik({
     initialValues: {
@@ -47,7 +47,10 @@ function YourBlog() {
     },
     onSubmit: async (values) => {
       try {
-        axios.post("https://blogers-junction-nodeapp.herokuapp.com/yourblog", values);
+        axios.post(
+          "https://blogers-junction-nodeapp.herokuapp.com/createblog",
+          values
+        );
         navigate("/blogs");
       } catch (error) {
         console.log("error");
@@ -55,9 +58,9 @@ function YourBlog() {
     },
   });
   return (
-    <div className="container-fluid d-flex justify-content-center yourblog-bg">
+    <div className="container-fluid d-flex justify-content-center createblog-bg">
       <form onSubmit={formik.handleSubmit}>
-        <div className="row mt-4 mb-4 blog-post">
+        <div className="row mt-4 mb-4 createblog-inputbox">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div className="row mt-2">
               <div className="col-lg-12">
@@ -76,9 +79,7 @@ function YourBlog() {
                   value={formik.values.blogimage}
                 />
                 {formik.touched.blogimage && formik.errors.blogimage ? (
-                  <span style={{ color: "red" }}>
-                    {formik.errors.blogimage}
-                  </span>
+                  <span className="text-danger">{formik.errors.blogimage}</span>
                 ) : null}
               </div>
             </div>
@@ -96,7 +97,7 @@ function YourBlog() {
                   value={formik.values.creatorname}
                 ></input>
                 {formik.touched.creatorname && formik.errors.creatorname ? (
-                  <span style={{ color: "red" }}>
+                  <span className="text-danger">
                     {formik.errors.creatorname}
                   </span>
                 ) : null}
@@ -116,9 +117,7 @@ function YourBlog() {
                   value={formik.values.published}
                 ></input>
                 {formik.touched.published && formik.errors.published ? (
-                  <span style={{ color: "red" }}>
-                    {formik.errors.published}
-                  </span>
+                  <span className="text-danger">{formik.errors.published}</span>
                 ) : null}
               </div>
             </div>
@@ -136,7 +135,7 @@ function YourBlog() {
                   value={formik.values.headline}
                 ></input>
                 {formik.touched.headline && formik.errors.headline ? (
-                  <span style={{ color: "red" }}>{formik.errors.headline}</span>
+                  <span className="text-danger">{formik.errors.headline}</span>
                 ) : null}
               </div>
             </div>
@@ -154,7 +153,7 @@ function YourBlog() {
                   value={formik.values.introduction}
                 ></textarea>
                 {formik.touched.introduction && formik.errors.introduction ? (
-                  <span style={{ color: "red" }}>
+                  <span className="text-danger">
                     {formik.errors.introduction}
                   </span>
                 ) : null}
@@ -189,7 +188,7 @@ function YourBlog() {
                   value={formik.values.paragraph1}
                 ></textarea>
                 {formik.errors.paragraph1 ? (
-                  <span style={{ color: "red" }}>
+                  <span className="text-danger">
                     {formik.errors.paragraph1}
                   </span>
                 ) : null}
@@ -269,7 +268,7 @@ function YourBlog() {
                   value={formik.values.conclusion}
                 ></textarea>
                 {formik.touched.conclusion && formik.errors.conclusion ? (
-                  <span style={{ color: "red" }}>
+                  <span className="text-danger">
                     {formik.errors.conclusion}
                   </span>
                 ) : null}
@@ -282,6 +281,10 @@ function YourBlog() {
                   type={"submit"}
                   value="Submit Blog"
                 ></input>
+                <p className="text-secondary">
+                  It takes some time prepare your blog so you can wait some time
+                  or refresh the Blogs page*
+                </p>
               </div>
             </div>
           </div>
@@ -291,4 +294,4 @@ function YourBlog() {
   );
 }
 
-export default YourBlog;
+export default CreateBlog;

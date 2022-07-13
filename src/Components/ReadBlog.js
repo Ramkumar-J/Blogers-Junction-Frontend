@@ -24,7 +24,7 @@ function ReadBlog() {
         <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 border border-3">
           <h1 className="mt-5 mb-2 fw-bold">{readblog.headline}</h1>
           <img
-            className="img-size mt-3 bg-secondary"
+            className="mt-3 bg-secondary blogimg-size"
             src={readblog.blogimage}
           ></img>
           <p className="fs-5 mt-3 mb-2">
@@ -37,13 +37,6 @@ function ReadBlog() {
           </p>
           <h2 className="mt-3 mb-2 fw-bold">Introduction</h2>
           <p className="fs-5">{readblog.introduction}</p>
-          {/* <h2 className="mt-3 mb-2 fw-bold">Contents</h2>
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol> */}
           <h3 className="mt-2 mb-2 fw-bold">{readblog.subheadline1}</h3>
           <p className="fs-5">{readblog.paragraph1}</p>
           <h3 className="mt-2 mb-2 fw-bold">{readblog.subheadline2}</h3>
@@ -63,7 +56,7 @@ function ReadBlog() {
               Do You Want to write your own blog{" "}
             </h5>
             <p className="fs-5 fw-bold text-success">Just Click Here*</p>
-            <Link to="/yourblog">
+            <Link to="/createblog">
               <button className="btn btn-primary btn-center">
                 Create Blog
               </button>

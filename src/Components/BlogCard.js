@@ -7,7 +7,9 @@ function BlogCard() {
   useEffect(() => {
     async function getAllblogs() {
       try {
-        let allblogs = await axios.get("https://blogers-junction-nodeapp.herokuapp.com/blogs");
+        let allblogs = await axios.get(
+          "https://blogers-junction-nodeapp.herokuapp.com/blogs"
+        );
         setblogs(allblogs.data);
       } catch (error) {
         console.log("error");
@@ -26,7 +28,7 @@ function BlogCard() {
                   <div className="card">
                     <div className="card-top mb-0">
                       <img
-                        className="img-fluid card-image"
+                        className="img-fluid blogcard-image"
                         src={blog.blogimage}
                       />
                       <hr className="mt-1 mb-0 border border-1 border-dark"></hr>
