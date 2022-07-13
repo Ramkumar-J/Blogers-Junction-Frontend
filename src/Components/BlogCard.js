@@ -28,9 +28,9 @@ function BlogCard() {
                   <div className="card">
                     <div className="card-top mb-0">
                       <img
-                        className="img-fluid blogcard-image"
+                        className="img-fluid bg-secondary blogcard-image"
                         src={blog.blogimage}
-                      />
+                      alt="Blog"/>
                       <hr className="mt-1 mb-0 border border-1 border-dark"></hr>
                       <div className="card-body pt-0">
                         <h3 className="card-title fw-bold">{blog.headline}</h3>

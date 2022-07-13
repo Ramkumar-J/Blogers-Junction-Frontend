@@ -26,7 +26,7 @@ function ReadBlog() {
           <img
             className="mt-3 bg-secondary blogimg-size"
             src={readblog.blogimage}
-          ></img>
+            alt="Blog"></img>
           <p className="fs-5 mt-3 mb-2">
             <strong className="text-primary">Created By</strong> -{" "}
             {readblog.creatorname}
@@ -51,7 +51,7 @@ function ReadBlog() {
             <img
               className="side-img img-fluid"
               src="https://media.istockphoto.com/photos/-picture-id860887528?b=1&k=20&m=860887528&s=170667a&w=0&h=VXWyAWe6s6C_kgtF4ADyOM2y4xqgAVT_yr8BZyWmYTg="
-            ></img>
+              alt="Ad"></img>
             <h5 className="text-success fw-bold">
               Do You Want to write your own blog{" "}
             </h5>
