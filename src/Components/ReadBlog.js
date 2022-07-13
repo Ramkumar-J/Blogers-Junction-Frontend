@@ -26,7 +26,7 @@ function ReadBlog() {
           <img
             className="mt-3 bg-secondary blogimg-size"
             src={readblog.blogimage}
-            alt="Blog"></img>
+            ></img>
           <p className="fs-5 mt-3 mb-2">
             <strong className="text-primary">Created By</strong> -{" "}
             {readblog.creatorname}
