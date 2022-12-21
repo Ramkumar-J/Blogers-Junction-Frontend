@@ -8,7 +8,7 @@ function BlogCard() {
     async function getAllblogs() {
       try {
         let allblogs = await axios.get(
-          "https://blogers-junction-nodeapp.herokuapp.com/blogs"
+          "https://blogers-junction-backend.vercel.app/blogs"
         );
         setblogs(allblogs.data);
       } catch (error) {

@@ -9,7 +9,7 @@ function ReadBlog() {
     async function getBlog() {
       try {
         let singleblog = await axios.get(
-          `https://blogers-junction-nodeapp.herokuapp.com/blogs/${params.id}`
+          `https://blogers-junction-backend.vercel.app/blogs/${params.id}`
         );
         setReadblog(singleblog.data);
       } catch (error) {

@@ -48,7 +48,7 @@ function CreateBlog() {
     onSubmit: async (values) => {
       try {
         axios.post(
-          "https://blogers-junction-nodeapp.herokuapp.com/createblog",
+          "https://blogers-junction-backend.vercel.app/createblog",
           values
         );
         navigate("/blogs");
