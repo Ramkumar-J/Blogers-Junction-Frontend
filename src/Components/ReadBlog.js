@@ -50,7 +50,7 @@ function ReadBlog() {
           <div className="side-contents mt-2">
             <img
               className="side-img img-fluid"
-              src="https://media.istockphoto.com/photos/-picture-id860887528?b=1&k=20&m=860887528&s=170667a&w=0&h=VXWyAWe6s6C_kgtF4ADyOM2y4xqgAVT_yr8BZyWmYTg="
+              src="asset/depositphotos_77040729-Vacation-entertainment-concept.webp"
               alt="Ad"></img>
             <h5 className="text-success fw-bold">
               Do You Want to write your own blog{" "}
