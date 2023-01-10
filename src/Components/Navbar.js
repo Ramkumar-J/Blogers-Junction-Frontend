@@ -21,17 +21,17 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="blog-nav">
           <ul className="navbar-nav ms-auto fs-5 text-white fw-bold">
-            <li className="nav-items">
+            <li className="nav-items link-item">
               <Link className="nav-link" to="/home">
                 Home
               </Link>
             </li>
-            <li className="nav-items">
+            <li className="nav-items link-item">
               <Link className="nav-link" to="/blogs">
                 Blogs
               </Link>
             </li>
-            <li className="nav-items">
+            <li className="nav-items link-item">
               <Link className="nav-link" to="/createblog">
                 CreateBlog
               </Link>

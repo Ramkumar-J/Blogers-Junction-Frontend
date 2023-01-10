@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
+.link-item:hover{
+   background-color: rgb(43, 101, 226);
+}
 /* Home page */
 .home-bg{
   background-image: url("https://www.chiefsalesleader.com/wp-content/uploads/2018/03/Text-Book-Background.png");

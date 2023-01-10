@@ -50,7 +50,7 @@ function BlogCard() {
                 style={{ width: "5rem", height: "5rem" }}
                 role="status"
               ></div>
-              <p class="text-white fs-3 fw-bold">
+              <p class="text-danger fs-3 fw-bold">
                 Blogs Loading Please wait...
               </p>
             </div>

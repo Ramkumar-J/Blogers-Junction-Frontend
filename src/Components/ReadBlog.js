@@ -35,7 +35,7 @@ function ReadBlog() {
             <strong className="text-primary">Published on</strong> -{" "}
             {readblog.published}
           </p>
-          <h2 className="mt-3 mb-2 fw-bold">Introduction</h2>
+          <h2 className="mt-3 mb-2 fw-bold text-info">Introduction</h2>
           <p className="fs-5">{readblog.introduction}</p>
           <h3 className="mt-2 mb-2 fw-bold">{readblog.subheadline1}</h3>
           <p className="fs-5">{readblog.paragraph1}</p>
@@ -43,15 +43,15 @@ function ReadBlog() {
           <p className="fs-5">{readblog.paragraph2}</p>
           <h3 className="mt-2 mb-2 fw-bold">{readblog.subheadline3}</h3>
           <p className="fs-5">{readblog.paragraph3}</p>
-          <h2 className="mt-3 mb-2 fw-bold">Conclusion</h2>
+          <h2 className="mt-3 mb-2 fw-bold text-info">Conclusion</h2>
           <p className="fs-5">{readblog.conclusion}</p>
         </div>
         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <div className="side-contents mt-2">
             <img
               className="side-img img-fluid"
-              src="asset/depositphotos_77040729-Vacation-entertainment-concept.webp"
-              alt="Ad"></img>
+              src="https://media.istockphoto.com/photos/-picture-id860887528?b=1&k=20&m=860887528&s=170667a&w=0&h=VXWyAWe6s6C_kgtF4ADyOM2y4xqgAVT_yr8BZyWmYTg="
+              alt="Blog Ad Image "></img>
             <h5 className="text-success fw-bold">
               Do You Want to write your own blog{" "}
             </h5>
