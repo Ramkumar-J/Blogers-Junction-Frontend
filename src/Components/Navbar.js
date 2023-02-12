@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
+  let navigate = useNavigate();
+  let handleLogout = () => {
+    window.localStorage.removeItem("myappToken");
+    navigate("/signin");
+  };
   return (
     <nav className="navbar navbar-expand-md bg-primary navbar-dark">
       <div class="container">
@@ -35,6 +40,11 @@ function Navbar() {
               <Link className="nav-link" to="/createblog">
                 CreateBlog
               </Link>
+            </li>
+            <li className="nav-items link-item">
+            <button class="dropdown-item" onClick={handleLogout}>
+                      Logout
+                    </button>
             </li>
           </ul>
         </div>

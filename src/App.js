@@ -9,6 +9,8 @@ import Blogs from './Routes/Blogs';
 import Footer from './Components/Footer';
 import ReadBlog from './Components/ReadBlog';
 import CreateBlog from './Routes/CreateBlog';
+import Signup from './Routes/Signup';
+import Signin from './Routes/Signin';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Signup />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/signin" element={<Signin />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/createblog" element={<CreateBlog />}></Route>

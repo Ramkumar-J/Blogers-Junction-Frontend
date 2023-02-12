@@ -8,6 +8,65 @@
 .link-item:hover{
    background-color: rgb(43, 101, 226);
 }
+
+/* Signup Page */
+.signup-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  /* background-image: url("https://fizzle.co/wp-content/uploads/2012/01/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat:no-repeat; */
+  background-image: url("https://www.chiefsalesleader.com/wp-content/uploads/2018/03/Text-Book-Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.signup-title{
+  font-size: 35px;
+  color: coral;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.form-container{
+  border: 1px solid white;
+  padding: 20px;
+}
+.form-input-container{
+  margin: 20px;
+}
+.form-label{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px !important;
+}
+.form-field{
+  border: none;
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+.form-btn-container{
+  margin: 20px;
+}
+.form-btn{
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(13, 110, 253);
+  font-weight: bold;
+  color: white;
+  height: 35px;
+}
+.signup-content{
+  margin: 20px;
+}
 /* Home page */
 .home-bg{
   background-image: url("https://www.chiefsalesleader.com/wp-content/uploads/2018/03/Text-Book-Background.png");

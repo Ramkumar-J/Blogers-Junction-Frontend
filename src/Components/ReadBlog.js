@@ -8,8 +8,15 @@ function ReadBlog() {
   useEffect(() => {
     async function getBlog() {
       try {
+        // let singleblog = await axios.get(
+        //   `https://blogers-junction-backend.vercel.app/blogs/${params.id}`
+        // );
         let singleblog = await axios.get(
-          `https://blogers-junction-backend.vercel.app/blogs/${params.id}`
+          `http://localhost:8080/blogs/${params.id}`,{
+            headers:{
+              Authorization:window.localStorage.getItem("myappToken")
+            }
+          }
         );
         setReadblog(singleblog.data);
       } catch (error) {

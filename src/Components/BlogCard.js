@@ -7,8 +7,13 @@ function BlogCard() {
   useEffect(() => {
     async function getAllblogs() {
       try {
+        // let allblogs = await axios.get("https://blogers-junction-backend.vercel.app/blogs");
         let allblogs = await axios.get(
-          "https://blogers-junction-backend.vercel.app/blogs"
+          "http://localhost:8080/blogs",{
+            headers:{
+              Authorization: window.localStorage.getItem("myappToken"), 
+            }
+          }
         );
         setblogs(allblogs.data);
       } catch (error) {
