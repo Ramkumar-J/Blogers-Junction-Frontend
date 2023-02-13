@@ -23,12 +23,12 @@ function Signin(){
      },
      onSubmit: async (values) => {
          try {
-            let loginData=await axios.post("http://localhost:8080/signin",values,{
-             });
+            let loginData=await axios.post("https://blogers-junction-backend.vercel.app/signin",values);
              window.localStorage.setItem("myappToken",loginData.data.jwttoken);
              navigate("/home");
          } catch(error) {
-             alert("Something went wrong");
+            console.log(`Error while user Signin: ${error}`);
+             alert("Credential Not Found");
          }
      }
     })

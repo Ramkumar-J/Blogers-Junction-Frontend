@@ -9,7 +9,7 @@ function BlogCard() {
       try {
         // let allblogs = await axios.get("https://blogers-junction-backend.vercel.app/blogs");
         let allblogs = await axios.get(
-          "http://localhost:8080/blogs",{
+          "https://blogers-junction-backend.vercel.app/blogs",{
             headers:{
               Authorization: window.localStorage.getItem("myappToken"), 
             }
@@ -17,7 +17,8 @@ function BlogCard() {
         );
         setblogs(allblogs.data);
       } catch (error) {
-        console.log("error");
+        console.log(`Error while getting all Blogs: ${error}`);
+        alert("Kindly Login to see Blogs")
       }
     }
     getAllblogs();

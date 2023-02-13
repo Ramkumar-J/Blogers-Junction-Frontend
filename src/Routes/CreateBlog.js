@@ -52,7 +52,7 @@ function CreateBlog() {
         //   values
         // );
         axios.post(
-          "http://localhost:8080/createblog",
+          "https://blogers-junction-backend.vercel.app/createblog",
           values,{
             headers:{
               Authorization:window.localStorage.getItem("myappToken")
@@ -61,7 +61,8 @@ function CreateBlog() {
         );
         navigate("/blogs");
       } catch (error) {
-        console.log("error");
+        console.log(`Error while creating Blogs: ${error}`);
+        alert("Kindly Login to create Blogs");
       }
     },
   });

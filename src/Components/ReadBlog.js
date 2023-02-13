@@ -12,7 +12,7 @@ function ReadBlog() {
         //   `https://blogers-junction-backend.vercel.app/blogs/${params.id}`
         // );
         let singleblog = await axios.get(
-          `http://localhost:8080/blogs/${params.id}`,{
+          `https://blogers-junction-backend.vercel.app/blogs/${params.id}`,{
             headers:{
               Authorization:window.localStorage.getItem("myappToken")
             }
@@ -20,7 +20,7 @@ function ReadBlog() {
         );
         setReadblog(singleblog.data);
       } catch (error) {
-        console.log(error);
+        console.log(`Error while get Blog: ${error}`);
       }
     }
     getBlog();

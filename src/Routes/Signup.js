@@ -27,10 +27,11 @@ function Signup(){
     },
     onSubmit: async (values) => {
         try {
-            await axios.post("http://localhost:8080/signup",values);
-            navigate("/signin");
+            await axios.post("https://blogers-junction-backend.vercel.app/signup",values);
+            alert("Signup Successfully");
+            navigate("/signin");           
         } catch(error) {
-            alert("Something went wrong");
+            console.log(`Error while user Signup: ${error}`);
         }
     }
    })
