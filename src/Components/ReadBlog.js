@@ -8,14 +8,12 @@ function ReadBlog() {
   useEffect(() => {
     async function getBlog() {
       try {
-        // let singleblog = await axios.get(
-        //   `https://blogers-junction-backend.vercel.app/blogs/${params.id}`
-        // );
         let singleblog = await axios.get(
-          `https://blogers-junction-backend.vercel.app/blogs/${params.id}`,{
-            headers:{
-              Authorization:window.localStorage.getItem("myappToken")
-            }
+          `https://blogers-junction-backend.vercel.app/blogs/${params.id}`,
+          {
+            headers: {
+              Authorization: window.localStorage.getItem("blogappToken"),
+            },
           }
         );
         setReadblog(singleblog.data);
@@ -33,7 +31,7 @@ function ReadBlog() {
           <img
             className="mt-3 bg-secondary blogimg-size"
             src={readblog.blogimage}
-            ></img>
+          ></img>
           <p className="fs-5 mt-3 mb-2">
             <strong className="text-primary">Created By</strong> -{" "}
             {readblog.creatorname}
@@ -54,11 +52,12 @@ function ReadBlog() {
           <p className="fs-5">{readblog.conclusion}</p>
         </div>
         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <div className="side-contents mt-2">
+          <div className="side-contents">
             <img
               className="side-img img-fluid"
-              src="https://media.istockphoto.com/photos/-picture-id860887528?b=1&k=20&m=860887528&s=170667a&w=0&h=VXWyAWe6s6C_kgtF4ADyOM2y4xqgAVT_yr8BZyWmYTg="
-              alt="Blog Ad Image "></img>
+              src="https://requestwriter.com/wp-content/uploads/2021/05/blog-post-writer.jpg"
+              alt="Blog Ad"
+            ></img>
             <h5 className="text-success fw-bold">
               Do You Want to write your own blog{" "}
             </h5>

@@ -1,50 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
-*{
-  padding:0;
-  margin:0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.link-item:hover{
-   background-color: rgb(43, 101, 226);
+.link-item:hover {
+  background-color: rgb(43, 101, 226);
 }
 
 /* Signup Page */
-.signup-container{
+.signup-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh;
-  /* background-image: url("https://fizzle.co/wp-content/uploads/2012/01/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat:no-repeat; */
-  background-image: url("https://www.chiefsalesleader.com/wp-content/uploads/2018/03/Text-Book-Background.png");
+  background-image: url("/asset/blog_app_landing_background.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
-.signup-title{
-  font-size: 35px;
+.signup-title {
+  font-size: 40px;
   color: coral;
   letter-spacing: 3px;
   font-weight: bold;
 }
-.form-container{
+.form-container {
   border: 1px solid white;
   padding: 20px;
 }
-.form-input-container{
+.form-input-container {
   margin: 20px;
 }
-.form-label{
+.form-label {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 2px !important;
 }
-.form-field{
+.form-field {
   border: none;
   width: 400px;
   height: 40px;
@@ -52,10 +48,10 @@
   padding-left: 10px;
   margin-top: 0px;
 }
-.form-btn-container{
+.form-btn-container {
   margin: 20px;
 }
-.form-btn{
+.form-btn {
   width: 100%;
   border-radius: 5px;
   border: none;
@@ -64,14 +60,18 @@
   color: white;
   height: 35px;
 }
-.signup-content{
-  margin: 20px;
+.signup-content {
+  margin-left: 20px;
+}
+.demo-user {
+  margin-left: 20px;
+  margin-top: 10px;
 }
 /* Home page */
-.home-bg{
-  background-image: url("https://www.chiefsalesleader.com/wp-content/uploads/2018/03/Text-Book-Background.png");
-  width:100%;
-  height:100vh;
+.home-bg {
+  background-image: url("/asset/blog_app_landing_background.png");
+  width: 100%;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -79,68 +79,72 @@
   align-items: center;
 }
 
-.home-content{
+.home-content {
   font-size: 60px;
   color: rgb(216, 31, 68);
   text-shadow: 15px 15px 15px rgb(12, 1, 14);
 }
 
 /* Blog Page */
-.blog-bg,.createblog-bg{
-  background-image: url("https://www.chiefsalesleader.com/wp-content/uploads/2018/03/Text-Book-Background.png");
-  width:100%;
-  height:auto;
+.blog-bg,
+.createblog-bg {
+  background-image: url("/asset/blog_app_landing_background.png");
+  width: 100%;
+  height: auto;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.blogcard-image{
+.blogcard-image {
   height: 200px !important;
-  width:500px;
+  width: 500px;
 }
 
 /* CreateBlog Page */
-.createblog-inputbox{
+.createblog-inputbox {
   background-color: transparent;
-  padding:20px;
-  width:600px;
+  padding: 20px;
+  width: 600px;
   height: auto;
-  border-radius:20px;
-  box-shadow:15px 15px 20px rgb(170, 169, 169);
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px rgb(170, 169, 169);
 }
 
 /* ReadBlog Page */
-.blogimg-size{
-  width:100%;
-  height:400px !important;
+.blogimg-size {
+  width: 100%;
+  height: 400px !important;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.side-img{
-  height:400px !important;
-  width:350px;
+.side-img {
+  height: 300px !important;
+  width: 350px;
 }
-.side-contents{
+.side-contents {
   position: fixed;
 }
 
+@media (max-width: 576px) {
+  .form-field {
+    width: 250px;
+    height: 40px;
+  }
+  .home-content {
+    font-size: 40px;
+    color: rgb(216, 31, 68);
+    text-shadow: 15px 15px 15px rgb(12, 1, 14);
+  }
+  .side-contents {
+    position: relative;
+  }
+  .createblog-inputbox {
+    width: 300px;
+  }
+}
 
-@media(max-width:576px){
- .home-content{
-  font-size: 40px;
-  color: rgb(216, 31, 68);
-  text-shadow: 15px 15px 15px rgb(12, 1, 14);
+@media (max-width: 768px) {
+  .side-contents {
+    position: relative;
+  }
 }
-.side-contents{
-  position: relative;
-}
-.createblog-inputbox{
-  width:300px;
-}
-}
-
-@media(max-width:768px){
- .side-contents{
-   position: relative;
- }
- }

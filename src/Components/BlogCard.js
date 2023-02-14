@@ -7,18 +7,18 @@ function BlogCard() {
   useEffect(() => {
     async function getAllblogs() {
       try {
-        // let allblogs = await axios.get("https://blogers-junction-backend.vercel.app/blogs");
         let allblogs = await axios.get(
-          "https://blogers-junction-backend.vercel.app/blogs",{
-            headers:{
-              Authorization: window.localStorage.getItem("myappToken"), 
-            }
+          "https://blogers-junction-backend.vercel.app/blogs",
+          {
+            headers: {
+              Authorization: window.localStorage.getItem("blogappToken"),
+            },
           }
         );
         setblogs(allblogs.data);
       } catch (error) {
         console.log(`Error while getting all Blogs: ${error}`);
-        alert("Kindly Login to see Blogs")
+        alert("Kindly Login to see Blogs");
       }
     }
     getAllblogs();
@@ -36,7 +36,8 @@ function BlogCard() {
                       <img
                         className="img-fluid bg-secondary blogcard-image"
                         src={blog.blogimage}
-                      alt="Blog"/>
+                        alt="Blog"
+                      />
                       <hr className="mt-1 mb-0 border border-1 border-dark"></hr>
                       <div className="card-body pt-0">
                         <h3 className="card-title fw-bold">{blog.headline}</h3>

@@ -4,13 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 function Navbar() {
   let navigate = useNavigate();
   let handleLogout = () => {
-    window.localStorage.removeItem("myappToken");
+    window.localStorage.removeItem("blogappToken");
     navigate("/signin");
   };
   return (
     <nav className="navbar navbar-expand-md bg-primary navbar-dark">
       <div class="container">
-        <Link className="navbar-brand fs-4 text-dark fw-bold" to="/">
+        <Link className="navbar-brand fs-4 text-dark fw-bold" to="/home">
           Blogers 🚥 <i className="text-warning">Junction</i>
         </Link>
         <button
@@ -41,10 +41,32 @@ function Navbar() {
                 CreateBlog
               </Link>
             </li>
-            <li className="nav-items link-item">
-            <button class="dropdown-item" onClick={handleLogout}>
-                      Logout
-                    </button>
+            <li className="nav-items link-item dropdown ms-2">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="mynavDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle fs-4"></i>
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="mynavDropdown">
+                <li>
+                  <Link className="dropdown-item text-primary" to="/signin">
+                    Signin
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item text-danger"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

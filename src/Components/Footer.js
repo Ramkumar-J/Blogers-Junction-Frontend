@@ -6,7 +6,7 @@ function Footer() {
     <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center border-top bg-dark mb-1">
       <p class="col-md-4 mb-1 text-white">© 2022 RK Blogers Junction, Inc</p>
       <Link
-        to="/"
+        to="/home"
         class="col-md-4 d-flex align-items-center justify-content-center fs-5 mb-1"
       >
         Blogers 🚥 Junction

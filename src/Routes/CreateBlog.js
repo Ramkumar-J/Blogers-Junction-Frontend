@@ -47,16 +47,13 @@ function CreateBlog() {
     },
     onSubmit: async (values) => {
       try {
-        // axios.post(
-        //   "https://blogers-junction-backend.vercel.app/createblog",
-        //   values
-        // );
         axios.post(
           "https://blogers-junction-backend.vercel.app/createblog",
-          values,{
-            headers:{
-              Authorization:window.localStorage.getItem("myappToken")
-            }
+          values,
+          {
+            headers: {
+              Authorization: window.localStorage.getItem("blogappToken"),
+            },
           }
         );
         navigate("/blogs");
